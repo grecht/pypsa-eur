@@ -543,6 +543,7 @@ if __name__ == "__main__":
             * new_lines_df["v_nom"]
             * new_lines_df["num_parallel"]
         ).round(2)
+        new_lines_df["s_max_pu"] = snakemake.config["lines"]["s_max_pu"]
     if not new_links_df.empty:
         # Add carrier types of lines and links
         new_links_df["carrier"] = "DC"
